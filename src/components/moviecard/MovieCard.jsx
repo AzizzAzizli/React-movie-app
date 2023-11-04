@@ -5,8 +5,8 @@ export const MovieCard = (props) => {
   // console.log(props.data.Poster);
   const [favMovies, setFavMovies] = useState([]);
   const [fav, setFav] = useState(false);
-  console.log(fav);
-  console.log(favMovies);
+  // console.log(fav);
+  // console.log(favMovies);
   function uppercase(name) {
     return name.split("")[0].toUpperCase() + name.slice(1);
   }
@@ -22,7 +22,7 @@ export const MovieCard = (props) => {
     } else {
       setFav(false);
     }
-    console.log(id);
+    // console.log(id);
   }
 
 

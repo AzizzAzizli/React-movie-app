@@ -31,7 +31,11 @@ export const Home = () => {
       setMovies(resData);
     });
   }
-
+function a(){
+  setTimeout(() =>{
+  return <h1 className=" fw-bold text-warning">Not found...</h1>
+  },500)
+}
   return (
     <div className="  d-flex flex-column gap-5 align-items-center row pt-5">
       <h1 className="fw-bold text-center text-primary">Movie app</h1>
@@ -42,9 +46,9 @@ export const Home = () => {
         </button>
       </div>
       <div className="d-flex flex-wrap gap-3 w-100 justify-content-center align-items-center container">
-        {movies?.map((movie) => (
+        {movies?movies.map((movie) => (
           <MovieCard key={movie.imdbID} data={movie}  movies={movies}/>
-        ))}
+        )): a()}
       </div>
     </div>
   );
